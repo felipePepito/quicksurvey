@@ -1,1 +1,17 @@
-<p>questionaire-edit works!</p>
+
+<label for="title">Title:</label><input [(ngModel)]="questionaire.title" id="title" class="ml-3">
+
+<input type="button" (click)="addQuestion()" value="Add Question" class="my-3 d-block">
+
+<app-question-edit [question]="questionToEdit"></app-question-edit>
+
+<div class="bg-white p-3 rounded" *ngFor="let question of questionaire.questions">
+  <h3 class="d-inline mr-3">{{ question.text }}</h3>
+  <input type="button" (click)="editQuestion(question)" value="Edit" class="mr-1">
+  <input type="button" (click)="deleteQuestion(question)" value="Delete">
+  <div class="m-1 p-1" *ngFor="let answer of question.answers">
+    <span>{{ answer.text }}</span>
+  </div>
+</div>
+
+

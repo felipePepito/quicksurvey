@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Questionaire } from '../interfaces/questionaire';
+import { questionaire } from '../mockup/mock-questionaire';
+import { Question } from '../interfaces/question';
 
 @Component({
   selector: 'app-questionaire-edit',
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionaireEditComponent implements OnInit {
 
-  constructor() { }
+  questionaire: Questionaire;
+  questionToEdit: Question;
+
+  constructor() {
+    this.questionaire = {
+      title: '',
+      questions: []
+    };
+  }
 
   ngOnInit(): void {
   }
 
+  addQuestion(): void {
+    this.questionToEdit = {
+      text: '',
+      answers: []
+    };
+    this.questionaire.questions.push(this.questionToEdit);
+  }
+
+  editQuestion(question: Question): void {
+    this.questionToEdit = question;
+  }
+
+  deleteQuestion(question: Question): void {
+    const i = this.questionaire.questions.indexOf(question);
+    this.questionaire.questions.splice(i, 1);
+  }
 }

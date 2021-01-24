@@ -1,0 +1,13 @@
+<div *ngIf="question" class="bg-white p-3 my-3 rounded">
+  <h3>Edit Question</h3>
+  <label for="text">Question text: </label><input [(ngModel)]="question.text" class="my-3 ml-1" id="text"><br>
+  <h4>Answers</h4>
+  <div *ngFor="let answer of question.answers; index as i" class="my-1">
+    <label for="answer-{{i}}">Answer {{i+1}}:</label>
+    <input [(ngModel)]="answer.text" id="answer-{{i}}" class="ml-1">
+    <input type="button" (click)="deleteAnswer(answer)" class="ml-1" value="Delete">
+  </div>
+  <input [(ngModel)]="answerToAdd.text"><input type="button" (click)="addAnswer()" class="ml-1" value="Add Answer">
+  <br><br>
+  <input type="button" (click)="doneEditing()" class="btn-success" value="Done">
+</div>
