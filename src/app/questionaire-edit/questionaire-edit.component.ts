@@ -39,4 +39,8 @@ export class QuestionaireEditComponent implements OnInit {
     const i = this.questionaire.questions.indexOf(question);
     this.questionaire.questions.splice(i, 1);
   }
+
+  doneEditing(): void {
+    this.questionToEdit = undefined;
+  }
 }

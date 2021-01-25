@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Question } from '../interfaces/question';
 import {Answer} from '../interfaces/answer';
@@ -12,13 +12,14 @@ import {Answer} from '../interfaces/answer';
 export class QuestionEditComponent implements OnInit {
 
   @Input() question: Question;
-  answerToAdd: Answer;
+  answerToAdd: Answer = {
+    text: '',
+    chosen: false
+  };
+
+  @Output() doneEditingEmitter = new EventEmitter<boolean>();
 
   constructor() {
-    this.answerToAdd = {
-      text: '',
-      chosen: false
-    };
   }
 
   ngOnInit(): void {
@@ -40,7 +41,7 @@ export class QuestionEditComponent implements OnInit {
   }
 
   doneEditing(): void {
-    this.question = undefined;
+    this.doneEditingEmitter.emit(true);
   }
 
 }
