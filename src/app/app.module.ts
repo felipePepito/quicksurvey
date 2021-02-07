@@ -3,20 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { QuestionaireEditComponent } from './questionaire-edit/questionaire-edit.component';
+import { QuestionnaireEditComponent } from './questionaire-edit/questionnaire-edit.component';
 import { QuestionEditComponent } from './question-edit/question-edit.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionaireEditComponent,
-    QuestionEditComponent
+    QuestionnaireEditComponent,
+    QuestionEditComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+.recent {
+  background-color: var(--light-blue) !important;
+}
+.card-custom {
+  box-shadow: 0 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.15);
+
+  border: 1px solid rgba(0,0,0,.125);
+}
+.card-custom:hover {
+  box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2), 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.19);
+}
