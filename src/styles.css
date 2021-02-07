@@ -11,4 +11,14 @@ h4 {
 
 :root {
   --light-blue: #a8c4df;
+  --light-green: #e7f4e3;
+  --light-grey: #959595;
+}
+.border-shadow {
+  box-shadow: 0 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0,0,0,.125);
+}
+.detached-font {
+  color: var(--light-grey);
+  font-style:italic
 }

@@ -1,13 +1,14 @@
+<h2>Edit Questionaire</h2>
+<label for="title" style="font-size: 1.2rem;">Title:</label><input [(ngModel)]="questionnaire.title" id="title" class="ml-3">
 
-<label for="title">Title:</label><input [(ngModel)]="questionnaire.title" id="title" class="ml-3">
+<span class="d-block detached-font">Created at: {{ questionnaire.createdAt | date: 'medium' }}</span>
 
-<input type="button" (click)="doneEditingQuestionnaire()" value="Save and Exit" class="my-3 d-block">
-
-<input type="button" (click)="addQuestion()" value="Add Question" class="my-3 d-block">
+<input type="button" (click)="doneEditingQuestionnaire()" value="Save and Exit" class="my-3">
+<input type="button" (click)="addQuestion()" value="Add Question" class="my-3 ml-2">
 
 <app-question-edit [question]="questionToEdit" (doneEditingEmitter)="doneEditingAnswer()"></app-question-edit>
 
-<div class="bg-white p-3 rounded" *ngFor="let question of questionnaire.questions">
+<div class="bg-white p-3 rounded mb-2 border-shadow" *ngFor="let question of questionnaire.questions">
   <h3 class="d-inline mr-3">{{ question.text }}</h3>
   <input type="button" (click)="editQuestion(question)" value="Edit" class="mr-1">
   <input type="button" (click)="deleteQuestion(question)" value="Delete">

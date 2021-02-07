@@ -1,4 +1,4 @@
-<div *ngIf="question" class="bg-white p-3 my-3 rounded">
+<div *ngIf="question" class="p-3 my-3 rounded border-shadow" style="background-color: var(--light-green)">
   <h3>Edit Question</h3>
   <label for="text">Question text: </label><input [(ngModel)]="question.text" class="my-3 ml-1" id="text"><br>
   <h4>Answers</h4>
@@ -9,5 +9,5 @@
   </div>
   <input [(ngModel)]="answerToAdd.text"><input type="button" (click)="addAnswer()" class="ml-1" value="Add Answer">
   <br><br>
-  <input type="button" (click)="doneEditing()" class="btn-success" value="Done">
+  <input type="button" (click)="doneEditing()" value="Done">
 </div>
