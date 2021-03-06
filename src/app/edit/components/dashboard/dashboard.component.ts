@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Questionnaire} from '../interfaces/questionnaire';
-import { QuestionnaireService } from '../services/questionnaire.service';
+import {Questionnaire} from '../../../interfaces/questionnaire';
+import { QuestionnaireService } from '../../../services/questionnaire.service';
 import { ActivatedRoute } from '@angular/router';
 import {Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
