@@ -13,6 +13,7 @@ export class QuestionnaireEditComponent implements OnInit {
 
   questionnaire: Questionnaire;
   questionToEdit: Question;
+  questionIsNew: boolean;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -31,11 +32,13 @@ export class QuestionnaireEditComponent implements OnInit {
       text: '',
       answers: []
     };
+    this.questionIsNew = true;
     this.questionnaire.questions.push(this.questionToEdit);
   }
 
   editQuestion(question: Question): void {
     this.questionToEdit = question;
+    this.questionIsNew = false;
   }
 
   deleteQuestion(question: Question): void {

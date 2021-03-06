@@ -1,0 +1,23 @@
+<mat-card>
+
+<form #loginForm="ngForm" (ngSubmit)="submit(loginForm, $event)">
+
+  <mat-form-field>
+    <input matInput type="email" name="email" placeholder="E-Mail" required ngModel #email="ngModel" email>
+    <mat-error *ngIf="email.errors?.required">Please submit your E-Mail address</mat-error>
+    <mat-error *ngIf="email.errors?.email">Please enter a valid E-Mail address</mat-error>
+  </mat-form-field><br>
+  <mat-form-field>
+    <input matInput type="password" name="password" placeholder="Password"
+           ngModel #password="ngModel"
+           required
+           appPasswordStrength>
+    <mat-error *ngIf="password.errors?.required">Please type in your password</mat-error>
+    <mat-error *ngIf="password.errors?.passwordStrength">The password must consist of uppercase, lowercase letters and numbers</mat-error>
+  </mat-form-field><br>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+<hr>
+
+</form>
+
+</mat-card>

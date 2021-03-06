@@ -12,10 +12,13 @@ import {Answer} from '../interfaces/answer';
 export class QuestionEditComponent implements OnInit {
 
   @Input() question: Question;
+  @Input() questionIsNew: boolean;
   answerToAdd: Answer = {
     text: '',
     chosen: false
   };
+
+
 
   @Output() doneEditingEmitter = new EventEmitter<boolean>();
 

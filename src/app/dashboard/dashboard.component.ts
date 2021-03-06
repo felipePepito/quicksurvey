@@ -16,11 +16,11 @@ export class DashboardComponent implements OnInit {
   now = new Date();
 
   constructor(private questionnaireService: QuestionnaireService) {
-      this.questionnaires = questionnaireService.questionnaires;
+
   }
 
   ngOnInit(): void {
-
+    this.questionnaires = this.questionnaireService.questionnaires;
   }
 
   cardClasses(createdAt: Date): object {

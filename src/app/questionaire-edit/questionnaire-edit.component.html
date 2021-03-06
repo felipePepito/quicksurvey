@@ -6,7 +6,7 @@
 <input type="button" (click)="doneEditingQuestionnaire()" value="Save and Exit" class="my-3">
 <input type="button" (click)="addQuestion()" value="Add Question" class="my-3 ml-2">
 
-<app-question-edit [question]="questionToEdit" (doneEditingEmitter)="doneEditingAnswer()"></app-question-edit>
+<app-question-edit [question]="questionToEdit" [questionIsNew]="questionIsNew" (doneEditingEmitter)="doneEditingAnswer()"></app-question-edit>
 
 <div class="bg-white p-3 rounded mb-2 border-shadow" *ngFor="let question of questionnaire.questions">
   <h3 class="d-inline mr-3">{{ question.text }}</h3>

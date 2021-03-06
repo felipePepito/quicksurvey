@@ -1,6 +1,10 @@
 <div *ngIf="question" class="p-3 my-3 rounded border-shadow" style="background-color: var(--light-green)">
-  <h3>Edit Question</h3>
-  <label for="text">Question text: </label><input [(ngModel)]="question.text" class="my-3 ml-1" id="text"><br>
+  <h3 *ngIf="questionIsNew">Add Question</h3>
+  <h3 *ngIf="!questionIsNew">Edit Question</h3>
+
+  <label for="text">Question text: </label>
+  <input [(ngModel)]="question.text" class="my-3 ml-1" id="text"><br>
+
   <h4>Answers</h4>
   <div *ngFor="let answer of question.answers; index as i" class="my-1">
     <label for="answer-{{i}}">Answer {{i+1}}:</label>
