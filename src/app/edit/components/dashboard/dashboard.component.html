@@ -8,7 +8,7 @@
   <div *ngFor="let questionnaire of questionnaires" class="col-md-4">
     <div class="p-2 rounded mb-3 card-custom" style="background-color:#bbb" [ngClass]="cardClasses(questionnaire.createdAt)">
       <h4>{{questionnaire.title}}</h4>
-      <input type="button" value="Edit" [routerLink]="['/questionnaire-edit', questionnaire.id]">
+      <input type="button" value="Edit" [routerLink]="['/edit', questionnaire.id]">
     </div>
   </div>
 

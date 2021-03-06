@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Questionnaire } from '../interfaces/questionnaire';
-import { Question } from '../interfaces/question';
+import { Questionnaire } from '../../../interfaces/questionnaire';
+import { Question } from '../../../interfaces/question';
 import {ActivatedRoute, Router} from '@angular/router';
-import { QuestionnaireService } from '../services/questionnaire.service';
+import { QuestionnaireService } from '../../../services/questionnaire.service';
 
 @Component({
   selector: 'app-questionaire-edit',
