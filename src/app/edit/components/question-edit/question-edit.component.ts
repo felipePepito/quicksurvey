@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-import { Question } from '../../../interfaces/question';
-import {Answer} from '../../../interfaces/answer';
+import { Question } from '../../../model/question';
+import {Answer} from '../../../model/answer';
 
 @Component({
   selector: 'app-question-edit',

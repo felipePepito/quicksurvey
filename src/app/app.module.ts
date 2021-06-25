@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './login/login.module';
 import { EditModule } from './edit/edit.module';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,10 @@ import { EditModule } from './edit/edit.module';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LoginModule,
-    EditModule
+    EditModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Questionnaire} from '../interfaces/questionnaire';
+import {Questionnaire} from '../model/questionnaire';
 
 import {of, Observable, BehaviorSubject} from 'rxjs';
 import {uuid} from '../utilities/uuid';

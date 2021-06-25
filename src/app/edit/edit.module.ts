@@ -5,6 +5,7 @@ import {QuestionEditComponent} from './components/question-edit/question-edit.co
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from '../app-routing.module';
+import {EditQuestionnaireHttpService} from './services/edit-questionnaire-http.service';
 
 
 
@@ -18,6 +19,9 @@ import {AppRoutingModule} from '../app-routing.module';
     CommonModule,
     FormsModule,
     AppRoutingModule
+  ],
+  providers: [
+    EditQuestionnaireHttpService
   ]
 })
 export class EditModule { }

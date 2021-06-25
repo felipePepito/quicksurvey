@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Questionnaire} from '../../../interfaces/questionnaire';
+import {Questionnaire} from '../../../model/questionnaire';
 import { QuestionnaireService } from '../../../services/questionnaire.service';
 import { ActivatedRoute } from '@angular/router';
 import {Observable} from 'rxjs';
@@ -27,6 +27,10 @@ export class DashboardComponent implements OnInit {
     return {
       recent: (createdAt.getTime() - Date.now()) < 4.32e+8
     };
+  }
+
+  createQuestionnaire(): void {
+    // store.dispatch()
   }
 
 }

@@ -1,5 +1,5 @@
-import {Questionnaire} from '../interfaces/questionnaire';
-import {Answer} from '../interfaces/answer';
+import {Questionnaire} from '../model/questionnaire';
+import {Answer} from '../model/answer';
 import {cloneDeep} from 'lodash';
 import {uuid} from '../utilities/uuid';
 
